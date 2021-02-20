@@ -13,7 +13,7 @@ const Navbar = () => {
                 <Toolbar>
                     <Typography variant="h6" className={classes.title} color="inherit">
                         <img src={logo} alt='Boreale.js' height="25px" className={classes.image} />
-                        Boreale.js
+                        Rooster Town
                     </Typography>
                     <div className={classes.grow} />
                     <div className={classes.button}>
