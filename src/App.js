@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { commerce } from './lib/commerce'
-import { Products, Navbar } from './components'
+import { Products, Navbar, Cart } from './components'
 import { queryByAltText } from '@testing-library/react'
 
 const App = () => {
