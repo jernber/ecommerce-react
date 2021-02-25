@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { commerce } from './lib/commerce'
 import { Products, Navbar, Cart } from './components'
 import { queryByAltText } from '@testing-library/react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const App = () => {
     const [products, setProducts] = useState([])
@@ -30,11 +31,20 @@ const App = () => {
     }, [])
 
     return (
-        <div>
+        <Router>
+            <div>
             <Navbar totalItems={cart.total_items} />
-            <Cart cart={cart} />
-            {/* <Products products={products} onAddToCart={handleAddToCart} /> */}
-        </div>
+            <Switch>
+                <Route exact path="/">
+                    <Products products={products} onAddToCart={handleAddToCart} />
+                </Route>
+                
+                <Route exact path="/cart">
+                    <Cart cart={cart} />   
+                </Route>
+            </Switch>
+            </div>
+        </Router>
     )
 }
 
