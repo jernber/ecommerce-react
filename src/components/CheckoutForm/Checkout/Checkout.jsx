@@ -1,12 +1,20 @@
 import React, { useState } from 'react'
 import { Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider, Button} from '@material-ui/core'
 import useStyles from './styles'
+import AddressForm from '../AddressForm'
+import PaymentForm from '../PaymentForm'
 
 const steps =['Shipping Address', 'Payment Details']
 
 const Checkout = () => {
     const [activeStep, setActiveStep] = useState(0)
     const classes = useStyles()
+
+    const Confirmation = () => {
+        <div className="">
+            Confirmation
+        </div>
+    }
 
     const Form = () => activeStep == 0 
         ? <AddressForm />
@@ -29,7 +37,7 @@ const Checkout = () => {
                     </Paper>
                 </main>
             </div>
-        </AddressForm>
+        </>
     )
 }
 
