@@ -32,7 +32,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     )
     // solves fetching of cart errors
     if(!cart.line_items) return 'Loading...'
-
+    
     return (
        <Container>
            <div className={classes.toolbar} />
