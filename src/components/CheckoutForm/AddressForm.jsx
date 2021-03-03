@@ -19,6 +19,7 @@ const AddressForm = ({ checkoutToken }) => {
         const { countries } = await commerce.services.localeListShippingCountries(checkoutTokenID)
         setShippingCountries(countries)
         console.log(countries)
+        setShippingCountry(Object.keys(countries)[0])
     }
 
     useEffect(() =>{
